@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Debug|Win32|D:\src\design_pattern\design_pattern_helen\creational_patterns\abstract_factory\build_cmd\CMakeFiles\3.6.1\CompilerIdCXX\|
