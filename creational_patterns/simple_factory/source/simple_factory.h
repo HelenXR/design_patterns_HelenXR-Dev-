@@ -2,13 +2,15 @@
 #define HELENDP_SOURCE_SIMPLE_FACTORY_H_
 #include "watch.h"
 
-#define APPLE_TYPE	0
-#define HUAWEI_TYPE	1
+typedef enum{
+	APPLE_TYPE = 0,
+	HUAWEI_TYPE	
+}WatchType;
+
 class SimpleFactory{
 public:
 	SimpleFactory();
 	~SimpleFactory();
-
-	Watch* CreateWatch(unsigned char type);
+	Watch* CreateWatch(WatchType type);
 };
 #endif

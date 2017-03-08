@@ -3,7 +3,9 @@
 #include <windows.h>
 #include <stdio.h>
 using namespace std;
-
+/*
+design_pattern:"singleton"
+*/
 int main(){
 	//this will cause compile error,because singleton construct is private!
 	//Singleton *singleton = new singleton();;

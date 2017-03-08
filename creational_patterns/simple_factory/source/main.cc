@@ -1,6 +1,8 @@
 #include <windows.h>
 #include "simple_factory.h"
-
+/*
+design_pattern:"simple factory"
+*/
 int main(){
 	SimpleFactory *simple_factory = new SimpleFactory();
 	Watch *apple_watch = simple_factory->CreateWatch(APPLE_TYPE);

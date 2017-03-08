@@ -11,7 +11,7 @@ SimpleFactory::~SimpleFactory(){
 
 }
 
-Watch* SimpleFactory::CreateWatch(unsigned char type){
+Watch* SimpleFactory::CreateWatch(WatchType type){
 	if (APPLE_TYPE == type)
 		return new AppleWatch();
 	else if (HUAWEI_TYPE == type)

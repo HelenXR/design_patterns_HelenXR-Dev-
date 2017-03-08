@@ -6,7 +6,6 @@ class HuaweiWatch : public Watch{
 public:
 	HuaweiWatch();
 	~HuaweiWatch();
-
 	void ShowInformation();
 };
 #endif
