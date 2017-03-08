@@ -13,4 +13,3 @@ MideaCooker::~MideaCooker(){
 void MideaCooker::Cooking(){
 	cout << "Midea Cooker Cooing!" << endl;
 }
-

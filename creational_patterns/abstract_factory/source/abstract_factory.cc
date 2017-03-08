@@ -5,4 +5,3 @@ AbstractFactory::AbstractFactory(){
 
 AbstractFactory::~AbstractFactory(){
 }
-

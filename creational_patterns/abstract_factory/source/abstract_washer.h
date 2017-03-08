@@ -5,7 +5,7 @@ class AbstractWasher{
 public:
 	AbstractWasher();
 	virtual ~AbstractWasher();
-	//洗衣机的主要功能:洗衣机
+
 	virtual void Clothing() = 0;
 };
 #endif

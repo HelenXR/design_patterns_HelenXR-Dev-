@@ -9,4 +9,3 @@ public:
 	void Clothing();
 };
 #endif
-

@@ -4,7 +4,9 @@
 #include "haier_factory.h"
 #include "midea_factory.h"
 #include "windows.h"
-
+/*
+design_pattern:"abstract_factory"
+*/
 int main()
 {
 	AbstractFactory* haier_factory = new HaierFactory();
@@ -17,7 +19,8 @@ int main()
 	haier_washer->Clothing();
 	midea_cooker->Cooking();
 	midea_washer->Clothing();
-	
+
+	//clear
 	delete haier_factory;
 	delete midea_factory;
 	delete haier_cooker;
@@ -27,5 +30,3 @@ int main()
 	system("Pause");
 	return 0;
 }
-
-

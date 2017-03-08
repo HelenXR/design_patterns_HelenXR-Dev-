@@ -17,4 +17,3 @@ AbstractCooker* MideaFactory::CreateCooker(){
 AbstractWasher* MideaFactory::CreateWasher(){
 	return new MideaWasher();
 }
-

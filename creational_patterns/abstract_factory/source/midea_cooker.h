@@ -9,4 +9,3 @@ public:
 	void Cooking();
 };
 #endif
-

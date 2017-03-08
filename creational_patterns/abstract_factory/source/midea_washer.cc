@@ -13,4 +13,3 @@ MideaWasher::~MideaWasher(){
 void MideaWasher::Clothing(){
 	cout << "Midea Washer Clothing!" << endl;
 }
-
