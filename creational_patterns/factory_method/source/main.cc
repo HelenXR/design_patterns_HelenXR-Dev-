@@ -1,13 +1,11 @@
-/*
-工厂方法实例:
-跑鞋工厂:nike ASICS
-*/
 #include "nike_factory.h"
 #include "asics_factory.h"
 #include "nike_running_shoe.h"
 #include "asics_running_shoe.h"
 #include <windows.h>
-
+/*
+design_pattern:factory_method
+*/
 int main(){
 	Factory *nike_factory = new NikeFactory();
 	Factory *asics_factory = new AsicsFactory();
