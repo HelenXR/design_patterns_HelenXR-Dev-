@@ -6,7 +6,7 @@ design_pattern:"prototype"
 For example, the company to employees with computers.
 Assistant computer configuration: I5 processor, 19 inch display, ordinary keyboard.
 Software Engineer computer configuration: keyboard for cherry, the other with the assistantFollow up .
-all the same software engineers
+all the same software engineers.
 */
 int main(){
 	SoftwareComputer *software_computer = new SoftwareComputer();
