@@ -8,7 +8,7 @@ Director::Director(){
 Director::~Director(){
 
 }
-//组装手机
+
 Phone *Director::AssemblePhone(){
 	builder_->AssembleStepOne();
 	builder_->AssembleStepTwo();

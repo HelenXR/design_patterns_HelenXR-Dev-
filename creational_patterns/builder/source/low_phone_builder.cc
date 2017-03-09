@@ -23,4 +23,3 @@ void LowPhoneBuilder::AssembleStepThree(){
 Phone* LowPhoneBuilder::GetPhone(){
 	return phone_;
 }
-

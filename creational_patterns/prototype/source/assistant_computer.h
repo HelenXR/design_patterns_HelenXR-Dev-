@@ -8,13 +8,11 @@ public:
 	AssistantComputer();
 	virtual ~AssistantComputer();
 
-	virtual AssistantComputer* clone();
-	void SetDisplay(string display);
-	void SetKeyboard(string keyboard_);
+	AssistantComputer* clone();
 	virtual void ShowConfig();
 
 	string	processor_;
-	string  display_;
+	string  monitor_;
 	string  keyboard_;
 };
 #endif

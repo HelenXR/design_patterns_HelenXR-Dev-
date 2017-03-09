@@ -1,25 +1,25 @@
-/*
-比如公司给员工配电脑
-助理的电脑配置:i5 19寸显示器 双飞燕键盘,用着还不错.
-软件工程师说我要跟助理一样的配置,把键盘换成cherry的就可以了.
-*/
 #include <windows.h>
 #include "software_computer.h"
 
+/*
+design_pattern:"prototype"
+For example, the company to employees with computers.
+Assistant computer configuration: I5 processor, 19 inch display, ordinary keyboard.
+Software Engineer computer configuration: keyboard for cherry, the other with the assistantFollow up .
+all the same software engineers
+*/
 int main(){
-	AssistantComputer *assistant_computer = new SoftwareComputer();
-	assistant_computer->ShowConfig();
-	AssistantComputer *software_computer = assistant_computer->clone();
+	SoftwareComputer *software_computer = new SoftwareComputer();
 	software_computer->ShowConfig();
-	/*
-	assistant_computer->SetDisplay("32inch");
-	AssistantComputer *software_computer2 = assistant_computer->clone();
-	software_computer2->ShowConfig();
-	*/
+	AssistantComputer *software_computer_2 = software_computer->clone();
+	software_computer_2->ShowConfig();
+	AssistantComputer *software_computer_3 = software_computer->clone();
+	software_computer_3->ShowConfig();
 
 	//clear
-	delete assistant_computer;
 	delete software_computer;
+	delete software_computer_2;
+	delete software_computer_3;
 	system("Pause");
 	return 0;
 }

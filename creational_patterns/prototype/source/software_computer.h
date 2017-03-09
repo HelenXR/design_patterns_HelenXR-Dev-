@@ -7,9 +7,8 @@ using namespace std;
 class SoftwareComputer : public AssistantComputer{
 public:
 	SoftwareComputer();
-	SoftwareComputer(SoftwareComputer& software_computer);
 	~SoftwareComputer();
-	virtual AssistantComputer* clone();
+	SoftwareComputer* clone();
+	void ShowConfig();
 };
 #endif
-

@@ -4,28 +4,25 @@ using namespace std;
 
 AssistantComputer::AssistantComputer(){
 	processor_ = "i5 processor";
-	display_ = "19inch monitor";
-	keyboard_ = "shuangfeiyan";
+	monitor_ = "19 inch monitor";
+	keyboard_ = "Double Birds";
 }
 
 AssistantComputer::~AssistantComputer(){
 
 }
 
-void AssistantComputer::SetDisplay(string display){
-	display_ = display;
-}
-
-void AssistantComputer::SetKeyboard(string keyboard){
-	keyboard_ = keyboard;
-}
-
 AssistantComputer* AssistantComputer::clone(){
-	return 0;
+	AssistantComputer *assistant_computer = new AssistantComputer();
+	assistant_computer->processor_ = processor_;
+	assistant_computer->monitor_ = monitor_;
+	assistant_computer->keyboard_ = keyboard_;
+	return assistant_computer;
 }
+
 void AssistantComputer::ShowConfig(){
 	cout << "Assistant ShowConfig:" << endl;
 	cout << processor_ << endl;
-	cout << display_ << endl;
+	cout << monitor_ << endl;
 	cout << keyboard_ << endl;
 }

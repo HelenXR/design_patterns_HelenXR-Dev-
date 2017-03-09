@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
-手机包含处理器、内存、屏和其他基础配置
+Mobile phone includes processor, memory, panel and other basic configuration
 */
 class Phone{
 public:

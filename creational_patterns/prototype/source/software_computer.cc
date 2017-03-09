@@ -3,20 +3,23 @@
 #include <iostream>
 using namespace std;
 
-SoftwareComputer::SoftwareComputer(){
-
-}
-
-SoftwareComputer::SoftwareComputer(SoftwareComputer& software_computer){
-	processor_ = software_computer.processor_;
-	display_ = software_computer.display_;
-	keyboard_ = "cherry!";
+SoftwareComputer::SoftwareComputer():AssistantComputer(){
+	keyboard_ = "Cherry";
 }
 
 SoftwareComputer::~SoftwareComputer(){
 
 }
 
-AssistantComputer* SoftwareComputer::clone(){
-	return new SoftwareComputer(*this);
+SoftwareComputer* SoftwareComputer::clone(){
+	SoftwareComputer *software_computer = new SoftwareComputer();
+	((AssistantComputer *)software_computer)->clone();
+	return software_computer;
+}
+
+void SoftwareComputer::ShowConfig(){
+	cout << "software ShowConfig:" << endl;
+	cout << processor_ << endl;
+	cout << monitor_ << endl;
+	cout << keyboard_ << endl;
 }

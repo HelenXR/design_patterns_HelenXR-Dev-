@@ -15,4 +15,3 @@ private:
 	Phone* phone_;
 };
 #endif
-
