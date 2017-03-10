@@ -1,5 +1,5 @@
 /*
-跑步爱好者,平时都是以匀速奔跑的方式进行训练,但是为了提高成绩,需要做一段时间的力量训练来提高成绩
+design_pattern:"adapter"
 */
 #include "power_runner.h"
 #include <windows.h>
