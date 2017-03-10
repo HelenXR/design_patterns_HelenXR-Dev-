@@ -1,6 +1,7 @@
 #include "employee.h"
 #include <iostream>
 using namespace std;
+
 Employee::Employee(string name,int age,int salary){
 	name_ = name;
 	age_ = age;

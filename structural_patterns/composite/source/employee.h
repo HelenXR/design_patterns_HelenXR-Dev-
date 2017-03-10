@@ -17,6 +17,4 @@ private:
 	int age_;
 	int salary_;
 };
-
-
 #endif
