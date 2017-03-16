@@ -3,27 +3,25 @@
 using namespace std;
 
 RunnerClub::RunnerClub(){
-
+	human_resource_system_ = new HumanResourceSystem();
+	organizational_system_ = new OrganizationalSystem();
+	propaganda_system_ = new PropagandaSystem();
+	public_relation_system_ = new PublicRelationSystem();
 }
 
 RunnerClub::~RunnerClub(){
-
+	delete human_resource_system_;
+	delete organizational_system_;
+	delete propaganda_system_;
+	delete public_relation_system_;
 }
 
-void RunnerClub::RunnerGroupActivity(){
-	PropagateSystem *propagate_system = new PropagateSystem();
-	RegistrationSystem *registration_system = new RegistrationSystem();
-	ActivitySystem *activity_system = new ActivitySystem();
-	FinanceSystem *finance_system = new FinanceSystem();
+void RunnerClub::RecruitRunner(){
+	propaganda_system_->Run();
+	human_resource_system_->Run();
+}
 
-	cout << "长跑俱乐部组织一个活动:" << endl; 
-	propagate_system->Dopublicity();
-	registration_system->DoRegistation();
-	activity_system->DoActivity();
-	finance_system->FinancialSettle();
-
-	delete propagate_system;
-	delete registration_system;
-	delete activity_system;
-	delete finance_system;
+void RunnerClub::LongDistanceRace(){
+	public_relation_system_->Run();
+	organizational_system_->Run();
 }

@@ -1,11 +1,12 @@
-/*
-跑步的时候大家都会带一些修饰效果的装备,如头带,护腕.
-*/
 #include "Headband_decorator.h"
 #include "cuff_decorator.h"
 #include "cool_runner.h"
 #include <windows.h>
 
+/*
+design_pattern:"decorate"
+When running, everyone will bring some of the effects of the equipment, such as headband, cuff...
+*/
 int main(){
 	Runner *runner = new CoolRunner();
 	Runner *cuff_decorator = new CuffDecorator(runner);
