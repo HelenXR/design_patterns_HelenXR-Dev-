@@ -2,9 +2,8 @@
 #include <iostream>
 using namespace std;
 
-Runner::Runner(string name,Marathon *marathon)
+Runner::Runner(string name)
 	:Person(name){
-	marathon_ = marathon;
 }
 
 Runner::~Runner(){
@@ -12,5 +11,5 @@ Runner::~Runner(){
 }
 
 void Runner::Run(){
-	cout << this->GetName() << " " << "run in " << marathon_->GetName() << " marathon" << endl;
+	cout << this->GetName() << " " << "run in xiamen marathon" << endl;
 }

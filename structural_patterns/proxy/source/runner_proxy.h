@@ -5,12 +5,11 @@
 
 class RunnerProxy : public Person{
 public:
-	RunnerProxy(string name,Marathon *marathon);
+	RunnerProxy(string name);
 	~RunnerProxy();
 	void Run();
 	void SetRunner(Runner *runner);
 private:
 	Runner *runner_;
-	Marathon *marathon_;
 };
 #endif

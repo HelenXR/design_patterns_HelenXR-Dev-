@@ -2,9 +2,8 @@
 #include <iostream>
 using namespace std;
 
-RunnerProxy::RunnerProxy(string name,Marathon *marathon)
+RunnerProxy::RunnerProxy(string name)
 :Person(name){
-	marathon_ = marathon;
 }
 
 RunnerProxy::~RunnerProxy(){
@@ -17,5 +16,4 @@ void RunnerProxy::SetRunner(Runner *runner){
 
 void RunnerProxy::Run(){
 	runner_->Run();
-	//cout << this->GetName() << "(proxy:" << runner_->GetName() << ") " << "run in " << marathon_->GetName() << "marathon" << endl; 
 }
