@@ -1,10 +1,3 @@
-/*
-跑团运作需要经费,经费来自赞助商,赞助商当然不是红十字,给了你钱,就会有相应的请求.
-比如:马拉松快开始前,赞助商要求跑团搞一些活动宣传自己的品牌.
-第一个命令:唱歌
-第二个命令:跳舞
-第三个命令:穿红衣服,摆成鸡造型,鸡年哄哄火火.
-*/
 #include <windows.h>
 #include "club_manager.h"
 #include "sing_command.h"
@@ -13,6 +6,13 @@
 #include <iostream>
 using namespace std;
 
+/*
+design_pattern:"command"
+Running club needs funding, funding from sponsors, of course, 
+the sponsor is not the volunteer, to give you the money, 
+there will be a corresponding request,These requests will be handed out by the Club manager.
+request contains : sing,dance,chicken joy.
+*/
 int main(){
 	RunnerClub *runner_club = new RunnerClub();
 	Command *sing_command = new SingCommand(runner_club);
@@ -22,7 +22,8 @@ int main(){
 	club_manager->AddCommand(sing_command);
 	club_manager->AddCommand(dance_command);
 	club_manager->AddCommand(chicken_command);
-	//过了一会赞助商想一想觉得现场太吵了,打电话给俱乐部管理者说把唱歌取消
+	//After a while, the sponsor thought that the scene was too noisy and called 
+	//the club manager to cancel the singing
 	club_manager->DeleteCommand(sing_command);
 	club_manager->Action();
 

@@ -11,4 +11,3 @@ ChickenCommand::~ChickenCommand(){
 void ChickenCommand::ExcuteCommand(){
 	runner_club_->CosplayChicken();
 }
-

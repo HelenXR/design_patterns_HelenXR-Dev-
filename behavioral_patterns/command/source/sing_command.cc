@@ -11,4 +11,3 @@ SingCommand::~SingCommand(){
 void SingCommand::ExcuteCommand(){
 	runner_club_->Sing();
 }
-

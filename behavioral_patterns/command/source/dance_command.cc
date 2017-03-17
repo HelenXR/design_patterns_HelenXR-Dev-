@@ -11,4 +11,3 @@ DanceCommand::~DanceCommand(){
 void DanceCommand::ExcuteCommand(){
 	runner_club_->Dance();
 }
-

@@ -10,5 +10,4 @@ public:
 protected:
 	RunnerClub *runner_club_;
 };
-
 #endif
