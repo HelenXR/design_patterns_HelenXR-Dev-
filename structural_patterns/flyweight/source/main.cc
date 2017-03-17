@@ -1,20 +1,33 @@
-/*
-每个跑团都有自己的团服.每件衣服都申请一个对象,那么当跑团发展到10万人时,就有10万个对象,利用享元模式可以只有节省很多内存资源
-衣服尺码:M,L,XL,XXL.
-*/
 #include "clothes_factory.h"
+#include "leading_runner_clothes.h"
 #include <stdio.h>
 using namespace std;
 
+/*
+design_pattern:"flyweight"
+Each runner club has its own clothes. Each piece of clothing for an object, 
+then when the group ran to 100 thousand people, there are 100 thousand objects,
+the flyweight pattern can only save a lot of memory resources.
+The leading runner of the clothes have their own names, ordinary members of the clothes only the size difference.
+*/
 int main(){
 	ClothesFactory *clothes_factory = new ClothesFactory();
+	clothes_factory->GetClothes('S');
 	clothes_factory->GetClothes('M');
 	clothes_factory->GetClothes('L');
-	clothes_factory->GetClothes('XL');
-	Clothes *clothes_first = clothes_factory->GetClothes('XXL');
-	Clothes *clothes_second = clothes_factory->GetClothes('XXL');
+	Clothes *clothes_first = clothes_factory->GetClothes('X');
+	Clothes *clothes_second = clothes_factory->GetClothes('X');
+	Clothes *leading_clothes_first = new LeadingRunnerClothes();
+	Clothes *leading_clothes_second = new LeadingRunnerClothes();
+	
 	//check
-	printf("%p,%p\n", clothes_first, clothes_second);
+	printf("clothes_first=%p,clothes_second=%p\n", clothes_first, clothes_second);
+	printf("leading_clothes_first=%p,leading_clothes_second=%p\n",leading_clothes_first,leading_clothes_second);
+	
+	//clear 
+	delete clothes_factory;
+	delete leading_clothes_first;
+	delete leading_clothes_second;
 	system("Pause");
 	return 0;
 }
