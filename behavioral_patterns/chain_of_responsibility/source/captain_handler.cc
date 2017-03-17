@@ -11,19 +11,15 @@ CaptainHandler::~CaptainHandler(){
 
 }
 
-void CaptainHandler::SetHandler(Handler * handler){
-	handler_ = handler;
-}
-
 void CaptainHandler::Accept(Girl *girl){
-	cout << "开始审核(" << girl->GetName() << ")" << endl;
+	cout << endl << "audit(" << girl->GetName() << ")" << endl;
 	if(girl->GetSize() < 'B'){
-		cout << "队长" << "(" << name_ << "):你还太小,等长大了再来!" << endl;
+		cout << "captain" << "(" << name_ << "):too small,not pass!" << endl;
 	}
 	else{
 		if(handler_)
 		{
-			cout << "队长" << "(" << name_ << "):挺好,我让团长看看!" << endl;
+			cout << "captain" << "(" << name_ << "):Good,I'll submit to the colonel" << endl;
 			handler_->Accept(girl);
 		}
 	}

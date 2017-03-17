@@ -6,8 +6,6 @@ class ChiefHandler : public Handler{
 public:
 	ChiefHandler(string name);
 	~ChiefHandler();
-	virtual void SetHandler(Handler *handler);
 	virtual void Accept(Girl *girl);
 };
 #endif
-

@@ -11,16 +11,11 @@ ChiefHandler::~ChiefHandler(){
 
 }
 
-void ChiefHandler::SetHandler(Handler * handler){
-	handler_ = handler;
-}
-
 void ChiefHandler::Accept(Girl *girl){
 	if(girl->GetSize() < 'D'){
-		cout << "首领" << "(" << name_ << "):你还太小,等长大了再来!" << endl;
+		cout << "chief" << "(" << name_ << "):too small,not pass!" << endl;
 	}
 	else{
-		cout << "首领(" << name_ << "):这个女孩("<< girl->GetName() <<")审核通过!" << endl;
+		cout << "chief(" << name_ << "):the gril("<< girl->GetName() <<") big enough,pass!" << endl;
 	}
 }
-

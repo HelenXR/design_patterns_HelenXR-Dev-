@@ -1,19 +1,24 @@
-/*
-跑步俱乐部,有一个女孩来申请加入,这时候先把基本资料给队长,队长同意了在递交团长,团长同意了在递交给首领.
-*/
 #include "captain_handler.h"
 #include "colonel_handler.h"
 #include "chief_handler.h"
 #include <windows.h>
-int main(){
-	Girl *xiaoli = new Girl("小丽",'A');
-	Girl *xiaomei = new Girl("小美",'B');
-	Girl *xiaoya = new Girl("小雅",'C');
-	Girl *xiaohong = new Girl("小红",'D');
 
-	Handler *captain_handler = new CaptainHandler("张队长");
-	Handler *colonel_handler = new ColonelHandler("李团长");
-	Handler *chief_handler = new ChiefHandler("王首领");
+/*
+design_pattern:"chain_of_responsibility"
+Running club, there is a girl to apply to join, the basic information sends to the captain, 
+the captain agreed ,then submit to the colonel, 
+the colonel agreed ,then submit to the chief,
+if chief agrees,join the girl;
+*/
+int main(){
+	Girl *xiaoli = new Girl("xiaoli",'A');
+	Girl *xiaomei = new Girl("xiaomei",'B');
+	Girl *xiaoya = new Girl("xiaoya",'C');
+	Girl *xiaohong = new Girl("xiaohong",'D');
+
+	Handler *captain_handler = new CaptainHandler("captain_tom");
+	Handler *colonel_handler = new ColonelHandler("colone_jack");
+	Handler *chief_handler = new ChiefHandler("chief_jone");
 	
 	colonel_handler->SetHandler(chief_handler);
 	captain_handler->SetHandler(colonel_handler);

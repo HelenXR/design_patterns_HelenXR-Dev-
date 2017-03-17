@@ -6,7 +6,6 @@ class CaptainHandler : public Handler{
 public:
 	CaptainHandler(string name);
 	~CaptainHandler();
-	virtual void SetHandler(Handler *handler);
 	virtual void Accept(Girl *girl);
 };
 #endif

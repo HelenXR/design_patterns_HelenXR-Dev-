@@ -11,20 +11,15 @@ ColonelHandler::~ColonelHandler(){
 
 }
 
-void ColonelHandler::SetHandler(Handler * handler){
-	handler_ = handler;
-}
-
 void ColonelHandler::Accept(Girl *girl){
 	if(girl->GetSize() < 'C'){
-		cout << "团长" << "(" << name_ << "):你还太小,等长大了再来!" << endl;
+		cout << "colone" << "(" << name_ << "):too small,not pass!" << endl;
 	}
 	else{
 		if(handler_)
 		{
-			cout << "团长" << "(" << name_ << "):挺好,我让首领看看!" << endl;
+			cout << "colone" << "(" << name_ << "):Good,I'll submit to the chief" << endl;
 			handler_->Accept(girl);
 		}
 	}
 }
-

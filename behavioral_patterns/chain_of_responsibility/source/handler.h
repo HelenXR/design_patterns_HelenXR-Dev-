@@ -8,7 +8,7 @@ class Handler{
 public:
 	Handler();
 	virtual ~Handler();
-	virtual void SetHandler(Handler *handler) = 0;
+	void SetHandler(Handler *handler);
 	virtual void Accept(Girl *girl) = 0;
 protected:	
 	string name_;

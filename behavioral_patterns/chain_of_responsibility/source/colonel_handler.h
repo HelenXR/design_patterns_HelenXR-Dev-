@@ -6,8 +6,6 @@ class ColonelHandler : public Handler{
 public:
 	ColonelHandler(string name);
 	~ColonelHandler();
-	virtual void SetHandler(Handler *handler);
 	virtual void Accept(Girl *girl);
 };
 #endif
-
