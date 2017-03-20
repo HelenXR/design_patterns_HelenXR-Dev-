@@ -8,6 +8,7 @@ RunnerClub::RunnerClub(){
 	iterator_ = NULL;
 	vector_.clear();
 }
+
 RunnerClub::~RunnerClub(){
 	if(!iterator_){
 		delete iterator_;

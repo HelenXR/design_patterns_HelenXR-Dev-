@@ -8,10 +8,10 @@ public:
 	RunnerIterator(Club* club);
 	~RunnerIterator();
 
-	virtual string First();
-	virtual string Next();
-	virtual bool IsEnd();
-	virtual string GetCurrent();	
+	string First();
+	string Next();
+	bool IsEnd();
+	string GetCurrent();	
 private:
 	int index_;
 	Club *club_;
