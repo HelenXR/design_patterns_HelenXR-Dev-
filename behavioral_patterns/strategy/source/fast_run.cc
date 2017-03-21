@@ -13,4 +13,3 @@ FastRun::~FastRun(){
 void FastRun::Running(){
 	cout << "fast run method!" << endl;
 }
-

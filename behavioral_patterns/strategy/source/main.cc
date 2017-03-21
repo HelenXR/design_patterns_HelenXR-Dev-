@@ -1,17 +1,16 @@
-/*
-马拉松训练方法:
-耐力跑(LSD)
-排酸跑
-间歇跑
-
-第一次,耐力跑,一般跑的速度中等,距离很远,乳酸堆积较多,第二次最好安排一次排酸跑,即速度慢,距离短,第三次,身体恢复后,进行间歇跑,提高PB.
-*/
 #include "player.h"
 #include "slow_run.h"
 #include "middle_run.h"
 #include "fast_run.h"
 #include <windows.h>
 
+/*
+design_pattern:"strategy"
+Marathon training method:
+speed slow ,distance long
+speed middle , distance middle
+speed fast,distance short
+*/
 int main(){
 	Player *player = new Player();
 	Run *slow_run = new SlowRun();

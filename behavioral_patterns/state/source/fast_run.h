@@ -10,4 +10,3 @@ public:
 	void Handle(Context *context);
 };
 #endif        
-

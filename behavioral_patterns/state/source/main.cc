@@ -1,12 +1,14 @@
-/*
-为了提高跑步成绩很多人会选择间歇跑的方式:
-慢跑(6分钟/公里)--->中速跑(5分钟/公里)--->冲刺跑(4分钟/公里)反复循环.
-*/
 #include <windows.h>
 #include "slow_run.h"
 #include "middle_run.h"
 #include "context.h"
 
+/*
+design_pattern:"state"
+In order to improve the performance of running a lot of people will choose intermittent running:
+slow speed run(6km/minute)--->middle speed run(5km/minute)--->fast speed run(4km/minute)
+--->slow speed run(6km/minute)--->middle speed run(5km/minute)--->fast speed run(4km/minute).
+*/
 int main(){
 	Run *slow = new SlowRun();
 	Context *context = new Context(slow);
@@ -18,9 +20,8 @@ int main(){
 	context->Training();
 	context->Training();
 
-	//clear
+	//clear,need to delete object which created in last Handle method.
 	delete context;
-	//slow delete in context->Training method;
 	system("Pause");
 	return 0;
 }

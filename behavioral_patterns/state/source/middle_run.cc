@@ -14,4 +14,3 @@ void MiddleRun::Handle(Context *context){
 	cout << "middle run:5KM/M!" << endl;
 	context->SetRun(new FastRun());
 }
-

@@ -13,4 +13,3 @@ SlowRun::~SlowRun(){
 void SlowRun::Running(){
 	cout << "slow run method!" << endl;
 }
-

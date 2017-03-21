@@ -13,4 +13,3 @@ MiddleRun::~MiddleRun(){
 void MiddleRun::Running(){
 	cout << "middle run method!" << endl;
 }
-
