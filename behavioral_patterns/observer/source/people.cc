@@ -8,10 +8,6 @@ People::~People(){
 
 }
 
-void People::Update(string message){
-	
-}
-
 void People::SetName(string name){
 	name_ = name;
 }

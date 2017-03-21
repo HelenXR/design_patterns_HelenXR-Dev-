@@ -6,8 +6,8 @@ using namespace std;
 class People{
 public:
 	People(string name);
-	virtual ~People();
-	virtual void Update(string message);
+	~People();
+	virtual void Update() = 0;
 	void SetName(string name);
 	string GetName();
 private:

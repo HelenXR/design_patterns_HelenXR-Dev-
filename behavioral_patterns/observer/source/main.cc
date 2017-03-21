@@ -1,25 +1,29 @@
-/*
-马拉松比赛时,主办方需要根据天气情况给参与者发送一些信息,如果下雨了,运动员和志愿者就要穿一次性雨衣,如果没下雨,大家就照常.
-*/
 #include <windows.h>
 #include "runner_people.h"
 #include "volunteer_people.h"
-#include "sponsor.h"
+#include "sponsor_subject.h"
 
+/*
+design_pattern:"observer"
+Marathon, the organizers need to send some information to the participants 
+according to the weather conditions, if it rains, athletes and volunteers will 
+wear a disposable raincoat, if it does not rain, we will as usual
+*/
 int main(){
-	Sponsor *sponsor = new Sponsor();
-	RunnerPeople *zhang_san = new RunnerPeople("张三");
-	RunnerPeople *li_si = new RunnerPeople("李四");
-	VolunteerPeople *volunteer = new VolunteerPeople("志愿者");
+	SponsorSubject *sponsor = new SponsorSubject();
+	RunnerPeople *zhang_san = new RunnerPeople(sponsor,"zhang san");
+	RunnerPeople *li_si = new RunnerPeople(sponsor,"li si");
+	VolunteerPeople *volunteer = new VolunteerPeople(sponsor,"wang wu");
 
 	sponsor->Add(zhang_san);
 	sponsor->Add(li_si);
 	sponsor->Add(volunteer);
 
-	sponsor->Notify("下雨了,穿雨衣");
+	sponsor->Notify("rainy day,putting on a raincoat!");
 	/*
-	sponsor->Notify("没下雨,照常进行");
+	sponsor->Notify("sunny day,as usual!");
 	*/
+	
 	//clear
 	delete sponsor;
 	delete zhang_san;
@@ -27,4 +31,4 @@ int main(){
 	delete volunteer;
 	system("Pause");
 	return 0;
-	}
+}
