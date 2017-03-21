@@ -1,7 +1,3 @@
-/*
-每个跑完马拉松的人,对自己的成绩总是不满意的,5小时跑完的人,总是希望跑前如果多做准备,是可以跑进4小时30分的,4小时30分的人总是希望回到赛前多训练,跑进4小时的.
-利用这个模式,就可以回到赛前的状态.
-*/
 #include <windows.h>
 #include "caretaker.h"
 #include "player.h"
@@ -9,6 +5,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+design_patterns:"memento"
+Each run a marathon, always dissatisfied with their results, Use this mode, you can return to the state before the game
+*/
 int main(){
 	Caretaker *caretaker = new Caretaker();
 	Player *player = new Player("before the game");
@@ -27,4 +27,4 @@ int main(){
 	delete memento;
 	system("Pause");
 	return 0;
-	}
+}
