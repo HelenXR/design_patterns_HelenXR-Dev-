@@ -17,4 +17,3 @@ void BikeAction::GetMaleFeedBack(MalePeople * male_people){
 void BikeAction::GetFemaleFeedBack(FemalePeople * female_people){
 	cout << "GetFemaleFeedBack(bike):风景很好,心情很好!" << endl;
 }
-

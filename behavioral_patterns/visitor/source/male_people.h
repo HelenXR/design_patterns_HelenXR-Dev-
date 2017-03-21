@@ -9,4 +9,3 @@ public:
 	void Join(Action *action);	
 };
 #endif
-

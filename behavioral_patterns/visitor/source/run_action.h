@@ -10,4 +10,3 @@ public:
 	void GetFemaleFeedBack(FemalePeople *female_people);	
 };
 #endif
-

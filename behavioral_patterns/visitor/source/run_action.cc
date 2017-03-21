@@ -17,4 +17,3 @@ void RunAction::GetMaleFeedBack(MalePeople * male_people){
 void RunAction::GetFemaleFeedBack(FemalePeople * female_people){
 	cout << "GetFemaleFeedBack(run):ÓÖÀÛÓÖÎÞÁÄ!" << endl;
 }
-
